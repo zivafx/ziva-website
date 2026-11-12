@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ziva Backtesting — Free Backtesting App for Gold &amp; Forex Traders</title>
+<meta name="description" content="Ziva Backtesting is a free Android app for gold and forex traders: practise on real historical price data with a full replay system, TradingView-style drawing tools and a built-in trade journal. Free forever, no account, works offline.">
+<style>
+  :root{
+    --gold:#d4af37;
+    --gold-bright:#f0d47a;
+    --gold-deep:#9a7b24;
+    --bg:#000000;
+    --panel:#0b0b0b;
+    --panel-2:#111111;
+    --line:#262626;
+    --text:#f2efe6;
+    --muted:#b8b3a4;
+    --green:#26a69a;
+    --red:#ef5350;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--gold);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px;}
+
+  /* ---------- wordmark ---------- */
+  .wordmark{font-weight:800;letter-spacing:.35em;font-size:1.05rem;color:var(--text);white-space:nowrap;}
+  .wordmark em{
+    font-family:Georgia,"Times New Roman",serif;
+    font-style:italic;font-weight:600;letter-spacing:.02em;
+    background:linear-gradient(120deg,var(--gold-deep),var(--gold) 45%,var(--gold-bright));
+    -webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;color:transparent;
+    margin-left:.45em;
+  }
+  .wordmark.lg{font-size:clamp(2rem,6vw,3.4rem);line-height:1.15;}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:10;
+    background:rgba(0,0,0,.92);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;flex-wrap:wrap;}
+  .nav .fx{font-size:.72rem;letter-spacing:.3em;color:var(--gold);display:block;font-weight:700;}
+  .nav-links{display:flex;gap:26px;flex-wrap:wrap;}
+  .nav-links a{color:var(--text);font-size:.95rem;font-weight:600;letter-spacing:.04em;}
+  .nav-links a:hover{color:var(--gold);text-decoration:none;}
+
+  /* ---------- hero ---------- */
+  .hero{padding:72px 0 56px;text-align:center;border-bottom:1px solid var(--line);
+    background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(212,175,55,.10),transparent 70%);}
+  .hero .tag{display:inline-block;border:1px solid var(--gold-deep);color:var(--gold);
+    border-radius:999px;padding:4px 14px;font-size:.8rem;letter-spacing:.18em;font-weight:700;margin-bottom:22px;}
+  .hero p.pitch{max-width:720px;margin:22px auto 0;color:var(--muted);font-size:clamp(1rem,2.4vw,1.2rem);}
+  .hero p.pitch strong{color:var(--text);}
+  .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px;}
+  .btn{display:inline-block;padding:14px 28px;border-radius:10px;font-weight:700;font-size:1rem;letter-spacing:.02em;}
+  .btn:hover{text-decoration:none;transform:translateY(-1px);}
+  .btn-gold{background:linear-gradient(120deg,var(--gold-deep),var(--gold) 55%,var(--gold-bright));color:#000;box-shadow:0 6px 24px rgba(212,175,55,.25);}
+  .btn-ghost{border:1px solid var(--gold);color:var(--gold);background:transparent;}
+  .hero-art{margin:44px auto 0;max-width:760px;opacity:.95;}
+
+  /* ---------- sections ---------- */
+  section{padding:64px 0;}
+  h2.sec{font-size:clamp(1.5rem,4vw,2rem);text-align:center;letter-spacing:.02em;}
+  h2.sec span{color:var(--gold);}
+  .sec-sub{text-align:center;color:var(--muted);max-width:640px;margin:10px auto 0;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:38px;}
+  .card{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--gold);
+    border-radius:12px;padding:24px 22px;}
+  .card h3{font-size:1.08rem;margin-bottom:8px;color:var(--gold-bright);}
+  .card p{color:var(--muted);font-size:.96rem;}
+  .free-strip{margin-top:18px;background:var(--panel-2);border:1px solid var(--gold-deep);border-radius:12px;
+    padding:22px;text-align:center;font-size:1.05rem;}
+  .free-strip strong{color:var(--gold);}
+
+  /* ---------- download ---------- */
+  #download{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center;}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin:38px auto 0;max-width:900px;text-align:left;}
+  .step{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:20px;}
+  .step .n{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;
+    background:var(--gold);color:#000;font-weight:800;margin-bottom:10px;}
+  .step p{color:var(--muted);font-size:.95rem;}
+  .note{color:var(--muted);margin-top:22px;font-size:.92rem;}
+
+  /* ---------- about ---------- */
+  .about-box{max-width:760px;margin:0 auto;text-align:center;}
+  .about-box p{color:var(--muted);margin-top:14px;}
+  .about-box p strong{color:var(--text);}
+  .contact-line{margin-top:20px;font-size:1.05rem;}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--line);padding:34px 0 44px;text-align:center;color:var(--muted);font-size:.92rem;}
+  footer .risk{margin-top:12px;font-size:.85rem;color:#8d887a;max-width:720px;margin-left:auto;margin-right:auto;}
+  footer a{font-weight:600;}
+
+  @media (max-width:560px){
+    .nav{justify-content:center;text-align:center;}
+    .nav-links{gap:18px;justify-content:center;}
+    .hero{padding:52px 0 44px;}
+    section{padding:48px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div>
+      <span class="fx">ZIVA FX</span>
+      <span class="wordmark">ZIVA<em>Backtesting</em></span>
+    </div>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#download">Download</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">ZIVA FX</span>
+    <h1 class="wordmark lg">ZIVA<em>Backtesting</em></h1>
+    <p class="pitch">A <strong>free backtesting app for gold &amp; forex traders</strong> — practise on real historical
+      price data with a full replay system, TradingView-style drawing tools and a built-in trade journal.</p>
+    <div class="cta">
+      <a class="btn btn-gold" href="https://github.com/zivafx/ziva-backtesting/releases">Download for Android (Free)</a>
+      <a class="btn btn-ghost" href="https://github.com/zivafx/ziva-backtesting">View on GitHub</a>
+    </div>
+
+    <svg class="hero-art" viewBox="0 0 760 190" role="img" aria-label="Candlestick chart illustration" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="#2c2c2c" stroke-width="1">
+        <line x1="0" y1="38" x2="760" y2="38"/><line x1="0" y1="76" x2="760" y2="76"/>
+        <line x1="0" y1="114" x2="760" y2="114"/><line x1="0" y1="152" x2="760" y2="152"/>
+      </g>
+      <polyline points="10,150 90,128 170,138 250,102 330,112 410,78 490,88 570,54 650,64 740,34"
+        fill="none" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.65"/>
+      <g stroke-width="2">
+        <line x1="60" y1="96" x2="60" y2="142" stroke="#26a69a"/><rect x="48" y="106" width="24" height="26" fill="#26a69a"/>
+        <line x1="120" y1="88" x2="120" y2="130" stroke="#ef5350"/><rect x="108" y="96" width="24" height="24" fill="#ef5350"/>
+        <line x1="180" y1="104" x2="180" y2="150" stroke="#26a69a"/><rect x="168" y="114" width="24" height="24" fill="#26a69a"/>
+        <line x1="240" y1="70" x2="240" y2="118" stroke="#d4af37"/><rect x="228" y="80" width="24" height="26" fill="#d4af37"/>
+        <line x1="300" y1="82" x2="300" y2="126" stroke="#ef5350"/><rect x="288" y="90" width="24" height="24" fill="#ef5350"/>
+        <line x1="360" y1="52" x2="360" y2="100" stroke="#26a69a"/><rect x="348" y="62" width="24" height="26" fill="#26a69a"/>
+        <line x1="420" y1="60" x2="420" y2="104" stroke="#26a69a"/><rect x="408" y="68" width="24" height="24" fill="#26a69a"/>
+        <line x1="480" y1="44" x2="480" y2="92" stroke="#ef5350"/><rect x="468" y="54" width="24" height="26" fill="#ef5350"/>
+        <line x1="540" y1="30" x2="540" y2="76" stroke="#26a69a"/><rect x="528" y="40" width="24" height="24" fill="#26a69a"/>
+        <line x1="600" y1="36" x2="600" y2="84" stroke="#d4af37"/><rect x="588" y="46" width="24" height="26" fill="#d4af37"/>
+        <line x1="660" y1="18" x2="660" y2="62" stroke="#26a69a"/><rect x="648" y="28" width="24" height="24" fill="#26a69a"/>
+        <line x1="716" y1="10" x2="716" y2="48" stroke="#ef5350"/><rect x="704" y="18" width="24" height="20" fill="#ef5350"/>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<section id="features">
+  <div class="wrap">
+    <h2 class="sec">Everything you need to <span>practise properly</span></h2>
+    <p class="sec-sub">A complete backtesting workspace in your pocket — built for traders who practise before they risk real money.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Historical Replay</h3>
+        <p>Replay real historical price action bar by bar on 9 instruments — gold, silver and 7 major forex pairs.
+          All data is stored inside the app, so it works fully offline.</p>
+      </div>
+      <div class="card">
+        <h3>Replay Controls</h3>
+        <p>Play and pause the market, step forward candle by candle, and choose your speed from 1× to 10×.
+          Switch between multiple replay timeframes to match the way you trade.</p>
+      </div>
+      <div class="card">
+        <h3>Drawing Tools</h3>
+        <p>TradingView-style tools: trend lines, rays, rectangles and zones with labels, Fibonacci retracement,
+          circles, paths and text — with magnet snapping and reusable drawing templates for your setups.</p>
+      </div>
+      <div class="card">
+        <h3>Trade Journal &amp; Analytics</h3>
+        <p>Log every practice trade and see the truth in numbers: a dashboard with win rate, profit/loss tracking
+          and session statistics that show whether your strategy is actually improving.</p>
+      </div>
+      <div class="card">
+        <h3>Built-in Notebook</h3>
+        <p>Keep your trading rules, plans and lessons inside the app — your notebook sits next to your charts,
+          sessions and journal, so your process stays in one place.</p>
+      </div>
+      <div class="card">
+        <h3>Dark &amp; Light Themes</h3>
+        <p>A pure black-and-gold dark theme for night sessions, and a clean light theme for the day.
+          Pick the one your eyes prefer — the chart, tools and journal all follow it.</p>
+      </div>
+    </div>
+    <div class="free-strip"><strong>Free forever</strong> — no account, no paywall, and your data stays on your phone.</div>
+  </div>
+</section>
+
+<section id="download">
+  <div class="wrap">
+    <h2 class="sec">Download <span>Ziva Backtesting</span></h2>
+    <p class="sec-sub">Free for Android. Installs in under a minute.</p>
+    <div class="cta">
+      <a class="btn btn-gold" href="https://github.com/zivafx/ziva-backtesting/releases">Download for Android (Free)</a>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n">1</span>
+        <p><strong style="color:var(--text)">Download the APK</strong><br>Tap the download button above and save the app file to your phone.</p></div>
+      <div class="step"><span class="n">2</span>
+        <p><strong style="color:var(--text)">Open it &amp; allow install</strong><br>Open the downloaded file and, if your phone asks, allow install from the browser.</p></div>
+      <div class="step"><span class="n">3</span>
+        <p><strong style="color:var(--text)">Play Protect?</strong><br>If Play Protect shows a warning, tap “More details → Install anyway” to finish the install.</p></div>
+    </div>
+    <p class="note">Available for Android only for now.</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-box">
+    <h2 class="sec">About <span>Ziva FX</span></h2>
+    <p><strong>Ziva FX</strong> is an independent software project from <strong>Lahore, Pakistan</strong>, building free tools for traders.
+      Ziva Backtesting was made so that any trader — beginner or experienced — can practise on real market history,
+      test ideas honestly and keep a proper journal, without paying for expensive software.</p>
+    <p class="contact-line" id="contact">Questions or feedback? Email us at
+      <a href="mailto:contact@zivaapps.online">contact@zivaapps.online</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Ziva FX · Ziva Backtesting · <a href="mailto:contact@zivaapps.online">contact@zivaapps.online</a></div>
+    <p class="risk">Trading involves risk. This app is a practice/education tool; it does not provide financial advice.</p>
+  </div>
+</footer>
+
+</body>
+</html>
