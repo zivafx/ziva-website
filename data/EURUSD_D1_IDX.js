@@ -1,0 +1,1 @@
+window.BTIDX=window.BTIDX||{};window.BTIDX["EURUSD_D1"]={"symbol":"EURUSD","tf":"D1","from":1201132800,"to":1794873600,"bars":4998,"months":[{"m":"ALL","from":1201132800,"to":1794873600,"n":4998,"parts":[{"f":"EURUSD_D1_ALL_P0.js","n":4998,"b":219977,"v":"1794873600:219977"}]}]};
