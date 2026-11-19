@@ -1,0 +1,1 @@
+window.BTIDX=window.BTIDX||{};window.BTIDX["NZDUSD_D1"]={"symbol":"NZDUSD","tf":"D1","from":946857600,"to":1794960000,"bars":7009,"months":[{"m":"ALL","from":946857600,"to":1794960000,"n":7009,"parts":[{"f":"NZDUSD_D1_ALL_P0.js","n":5543,"b":240706,"v":"1617667200:240706"},{"f":"NZDUSD_D1_ALL_P1.js","n":1466,"b":65329,"v":"1794960000:65329"}]}]};

@@ -1,0 +1,1 @@
+window.BTIDX=window.BTIDX||{};window.BTIDX["EURJPY_D1"]={"symbol":"EURJPY","tf":"D1","from":946857600,"to":1794960000,"bars":7010,"months":[{"m":"ALL","from":946857600,"to":1794960000,"n":7010,"parts":[{"f":"EURJPY_D1_ALL_P0.js","n":5568,"b":240708,"v":"1620604800:240708"},{"f":"EURJPY_D1_ALL_P1.js","n":1442,"b":64327,"v":"1794960000:64327"}]}]};

@@ -1,0 +1,1 @@
+window.BTIDX=window.BTIDX||{};window.BTIDX["GBPJPY_D1"]={"symbol":"GBPJPY","tf":"D1","from":946857600,"to":1794960000,"bars":7009,"months":[{"m":"ALL","from":946857600,"to":1794960000,"n":7009,"parts":[{"f":"GBPJPY_D1_ALL_P0.js","n":5537,"b":240711,"v":"1616976000:240711"},{"f":"GBPJPY_D1_ALL_P1.js","n":1472,"b":65665,"v":"1794960000:65665"}]}]};

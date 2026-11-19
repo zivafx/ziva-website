@@ -1,0 +1,1 @@
+window.BTIDX=window.BTIDX||{};window.BTIDX["AUDUSD_D1"]={"symbol":"AUDUSD","tf":"D1","from":946857600,"to":1794960000,"bars":7007,"months":[{"m":"ALL","from":946857600,"to":1794960000,"n":7007,"parts":[{"f":"AUDUSD_D1_ALL_P0.js","n":5507,"b":240671,"v":"1613520000:240671"},{"f":"AUDUSD_D1_ALL_P1.js","n":1500,"b":66872,"v":"1794960000:66872"}]}]};

@@ -1,0 +1,1 @@
+window.BTIDX=window.BTIDX||{};window.BTIDX["GBPCAD_D1"]={"symbol":"GBPCAD","tf":"D1","from":946857600,"to":1794960000,"bars":7009,"months":[{"m":"ALL","from":946857600,"to":1794960000,"n":7009,"parts":[{"f":"GBPCAD_D1_ALL_P0.js","n":5545,"b":240700,"v":"1617840000:240700"},{"f":"GBPCAD_D1_ALL_P1.js","n":1464,"b":65320,"v":"1794960000:65320"}]}]};

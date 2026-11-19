@@ -1,0 +1,1 @@
+window.BTIDX=window.BTIDX||{};window.BTIDX["EURCHF_D1"]={"symbol":"EURCHF","tf":"D1","from":946857600,"to":1794960000,"bars":7010,"months":[{"m":"ALL","from":946857600,"to":1794960000,"n":7010,"parts":[{"f":"EURCHF_D1_ALL_P0.js","n":5540,"b":240699,"v":"1617148800:240699"},{"f":"EURCHF_D1_ALL_P1.js","n":1470,"b":65543,"v":"1794960000:65543"}]}]};

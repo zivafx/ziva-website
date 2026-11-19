@@ -1,0 +1,1 @@
+window.BTIDX=window.BTIDX||{};window.BTIDX["CADJPY_D1"]={"symbol":"CADJPY","tf":"D1","from":946857600,"to":1794960000,"bars":6769,"months":[{"m":"ALL","from":946857600,"to":1794960000,"n":6769,"parts":[{"f":"CADJPY_D1_ALL_P0.js","n":5989,"b":240706,"v":"1700611200:240706"},{"f":"CADJPY_D1_ALL_P1.js","n":780,"b":34840,"v":"1794960000:34840"}]}]};

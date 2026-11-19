@@ -1,0 +1,1 @@
+window.BTIDX=window.BTIDX||{};window.BTIDX["EURNZD_D1"]={"symbol":"EURNZD","tf":"D1","from":946857600,"to":1794960000,"bars":7007,"months":[{"m":"ALL","from":946857600,"to":1794960000,"n":7007,"parts":[{"f":"EURNZD_D1_ALL_P0.js","n":5554,"b":240673,"v":"1619136000:240673"},{"f":"EURNZD_D1_ALL_P1.js","n":1453,"b":64763,"v":"1794960000:64763"}]}]};
