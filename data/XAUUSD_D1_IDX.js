@@ -1,1 +1,0 @@
-window.BTIDX=window.BTIDX||{};window.BTIDX["XAUUSD_D1"]={"symbol":"XAUUSD","tf":"D1","from":1190332800,"to":1794960000,"bars":4999,"months":[{"m":"ALL","from":1190332800,"to":1794960000,"n":4999,"parts":[{"f":"XAUUSD_D1_ALL_P0.js","n":4418,"b":240706,"v":"1725494400:240706"},{"f":"XAUUSD_D1_ALL_P1.js","n":581,"b":32243,"v":"1794960000:32243"}]}]};

@@ -1,1 +1,0 @@
-window.BTIDX=window.BTIDX||{};window.BTIDX["USDCAD_D1"]={"symbol":"USDCAD","tf":"D1","from":1210118400,"to":1794960000,"bars":4999,"months":[{"m":"ALL","from":1210118400,"to":1794960000,"n":4999,"parts":[{"f":"USDCAD_D1_ALL_P0.js","n":4999,"b":206594,"v":"1794960000:206594"}]}]};

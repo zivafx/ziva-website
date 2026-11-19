@@ -1,1 +1,0 @@
-window.BTIDX=window.BTIDX||{};window.BTIDX["EURCAD_D1"]={"symbol":"EURCAD","tf":"D1","from":1201478400,"to":1794960000,"bars":4999,"months":[{"m":"ALL","from":1201478400,"to":1794960000,"n":4999,"parts":[{"f":"EURCAD_D1_ALL_P0.js","n":4999,"b":214832,"v":"1794960000:214832"}]}]};

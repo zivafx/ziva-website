@@ -1,1 +1,0 @@
-window.BTIDX=window.BTIDX||{};window.BTIDX["GBPUSD_D1"]={"symbol":"GBPUSD","tf":"D1","from":1204502400,"to":1794960000,"bars":4999,"months":[{"m":"ALL","from":1204502400,"to":1794960000,"n":4999,"parts":[{"f":"GBPUSD_D1_ALL_P0.js","n":4999,"b":221396,"v":"1794960000:221396"}]}]};
