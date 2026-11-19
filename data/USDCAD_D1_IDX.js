@@ -1,1 +1,1 @@
-window.BTIDX=window.BTIDX||{};window.BTIDX["USDCAD_D1"]={"symbol":"USDCAD","tf":"D1","from":1210118400,"to":1794873600,"bars":4998,"months":[{"m":"ALL","from":1210118400,"to":1794873600,"n":4998,"parts":[{"f":"USDCAD_D1_ALL_P0.js","n":4998,"b":206546,"v":"1794873600:206546"}]}]};
+window.BTIDX=window.BTIDX||{};window.BTIDX["USDCAD_D1"]={"symbol":"USDCAD","tf":"D1","from":1210118400,"to":1794873600,"bars":4998,"months":[{"m":"ALL","from":1210118400,"to":1794873600,"n":4998,"parts":[{"f":"USDCAD_D1_ALL_P0.js","n":4998,"b":206549,"v":"1794873600:206549"}]}]};

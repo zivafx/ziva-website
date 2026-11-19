@@ -1,1 +1,1 @@
-window.BTIDX=window.BTIDX||{};window.BTIDX["NZDJPY_D1"]={"symbol":"NZDJPY","tf":"D1","from":1212019200,"to":1794873600,"bars":4998,"months":[{"m":"ALL","from":1212019200,"to":1794873600,"n":4998,"parts":[{"f":"NZDJPY_D1_ALL_P0.js","n":4998,"b":190567,"v":"1794873600:190567"}]}]};
+window.BTIDX=window.BTIDX||{};window.BTIDX["NZDJPY_D1"]={"symbol":"NZDJPY","tf":"D1","from":1212019200,"to":1794873600,"bars":4998,"months":[{"m":"ALL","from":1212019200,"to":1794873600,"n":4998,"parts":[{"f":"NZDJPY_D1_ALL_P0.js","n":4998,"b":190570,"v":"1794873600:190570"}]}]};

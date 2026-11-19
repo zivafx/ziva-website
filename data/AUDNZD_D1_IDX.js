@@ -1,1 +1,1 @@
-window.BTIDX=window.BTIDX||{};window.BTIDX["AUDNZD_D1"]={"symbol":"AUDNZD","tf":"D1","from":1210204800,"to":1794873600,"bars":4998,"months":[{"m":"ALL","from":1210204800,"to":1794873600,"n":4998,"parts":[{"f":"AUDNZD_D1_ALL_P0.js","n":4998,"b":207803,"v":"1794873600:207803"}]}]};
+window.BTIDX=window.BTIDX||{};window.BTIDX["AUDNZD_D1"]={"symbol":"AUDNZD","tf":"D1","from":1210204800,"to":1794873600,"bars":4998,"months":[{"m":"ALL","from":1210204800,"to":1794873600,"n":4998,"parts":[{"f":"AUDNZD_D1_ALL_P0.js","n":4998,"b":207806,"v":"1794873600:207806"}]}]};
