@@ -1,1 +1,1 @@
-window.BTIDX=window.BTIDX||{};window.BTIDX["USDJPY_D1"]={"symbol":"USDJPY","tf":"D1","from":1207612800,"to":1794873600,"bars":4998,"months":[{"m":"ALL","from":1207612800,"to":1794873600,"n":4998,"parts":[{"f":"USDJPY_D1_ALL_P0.js","n":4998,"b":211939,"v":"1794873600:211939"}]}]};
+window.BTIDX=window.BTIDX||{};window.BTIDX["USDJPY_D1"]={"symbol":"USDJPY","tf":"D1","from":1207612800,"to":1794960000,"bars":4999,"months":[{"m":"ALL","from":1207612800,"to":1794960000,"n":4999,"parts":[{"f":"USDJPY_D1_ALL_P0.js","n":4999,"b":211992,"v":"1794960000:211992"}]}]};
